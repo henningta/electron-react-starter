@@ -1,7 +1,19 @@
 {
-  "name": "pathfinder-react",
+  "name": "electron-react-starter",
   "version": "0.1.0",
+  "author": "Travis Henning",
   "private": true,
+  "license": "UNLICENSED",
+  "main": "src/electron/main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "electron": "electron .",
+    "electron-dev": "cross-env-shell ELECTRON_START_URL=http://localhost:3000 electron .",
+    "dev": "cross-env-shell BROWSER=none PORT=3000 nf start"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -15,11 +27,18 @@
     "react-scripts": "3.4.1",
     "typescript": "^3.7.5"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "electron": "^9.1.0",
+    "foreman": "^3.0.1",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
