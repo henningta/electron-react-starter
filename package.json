@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "electron": "^9.1.0",
+    "electron": "^11.5.0",
     "foreman": "^3.0.1",
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
